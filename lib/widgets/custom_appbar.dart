@@ -4,7 +4,6 @@ import 'package:bankomat/helpers/color_helpers.dart';
 
 import '../const/const.dart';
 
-
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   @override
   _CustomAppBar createState() => _CustomAppBar();
@@ -18,23 +17,27 @@ class _CustomAppBar extends State<CustomAppBar> {
     return Container(
       decoration: BoxDecoration(
         gradient: linearGradient(FIRST_COLOR, SECOND_COLOR),
+        boxShadow: [
+                BoxShadow(
+                  color: const Color(0x43170f50),
+                  offset: Offset(0, 6),
+                  blurRadius: 8,
+                ),
+              ],
       ),
-      child: SafeArea(        
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[              
-              Container(
+      child: SafeArea(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Container(
                 width: 66.79,
                 height: 25.7,
-                margin: EdgeInsets.only(left:16,top:16,bottom:16),
-                child:
-                    Image.asset('assets/icon.png')               
-                ),
-            ],
-          ),
+                margin: EdgeInsets.only(left: 16, top: 16, bottom: 16),
+
+                child: Image.asset('assets/icon.png')),
+          ],
         ),
-        
-  
+      ),
     );
   }
 }

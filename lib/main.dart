@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bankomat/pages/home_page.dart';
+import 'package:bankomat/pages/home_page/home_page.dart';
 import 'package:bankomat/bloc/main_bloc_provider.dart';
 import 'package:flutter/services.dart';
 
