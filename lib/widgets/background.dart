@@ -6,13 +6,11 @@ class Background extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double sizeWidth = MediaQuery.of(context).size.width;
+    double screenWidth = MediaQuery.of(context).size.width;
     return Stack(
       children: <Widget>[
-        SizedBox(width:sizeWidth, child: SvgPicture.asset('assets/top_bg.svg', allowDrawingOutsideViewBox: false, fit: BoxFit.fill,)),
-        Align(
-          alignment: Alignment(1.0, 1.0),
-          child: SizedBox(width:sizeWidth, child: SvgPicture.asset('assets/bottom_bg.svg', allowDrawingOutsideViewBox: false, fit: BoxFit.fill,))),
+        SizedBox(width:screenWidth, child: SvgPicture.asset('assets/top_bg.svg', allowDrawingOutsideViewBox: false, fit: BoxFit.fill,)),
+
       ],
     );
   }
