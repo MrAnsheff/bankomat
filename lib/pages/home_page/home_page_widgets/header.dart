@@ -11,7 +11,7 @@ class HeaderCreator extends StatefulWidget {
 }
 
 class _HeaderState extends State<HeaderCreator> {
-  TextEditingController moneyFieldEditingController;
+  final TextEditingController moneyFieldEditingController;
   double startFieldSize = 65;
   double actualFieldSize = 65;
 
@@ -52,7 +52,7 @@ class _HeaderState extends State<HeaderCreator> {
           ),
           Container(
             width: screenWidth,
-            padding: EdgeInsets.symmetric(horizontal:20),
+            padding: EdgeInsets.symmetric(horizontal: 20),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -74,7 +74,7 @@ class _HeaderState extends State<HeaderCreator> {
                         WhitelistingTextInputFormatter.digitsOnly,
                         DigitsFormatter(maxDigits: 10),
                       ],
-                      onChanged: (text){
+                      onChanged: (text) {
                         fieldSizeChanger(text);
                       },
                       style: TextStyle(
@@ -93,7 +93,6 @@ class _HeaderState extends State<HeaderCreator> {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                 
                 ],
               ),
             ),

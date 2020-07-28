@@ -32,6 +32,7 @@ dependencies:
   flutter_masked_text: ^0.7.0
   intl: ^0.16.1
   flutter_svg: ^0.18.0
+  ioc: ^0.3.0
 
 dev_dependencies:
   flutter_test:

@@ -9,8 +9,13 @@ class Background extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Stack(
       children: <Widget>[
-        SizedBox(width:screenWidth, child: SvgPicture.asset('assets/top_bg.svg', allowDrawingOutsideViewBox: false, fit: BoxFit.fill,)),
-
+        SizedBox(
+            width: screenWidth,
+            child: SvgPicture.asset(
+              'assets/top_bg.svg',
+              allowDrawingOutsideViewBox: false,
+              fit: BoxFit.fill,
+            )),
       ],
     );
   }

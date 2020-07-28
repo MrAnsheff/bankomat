@@ -11,7 +11,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController moneyFieldController = MoneyMaskedTextController(decimalSeparator: '.', thousandSeparator: ' ');
+    final TextEditingController moneyFieldController =
+        MoneyMaskedTextController(
+            decimalSeparator: '.', thousandSeparator: ' ');
 
     return Scaffold(
       resizeToAvoidBottomInset: false,

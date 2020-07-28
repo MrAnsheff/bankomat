@@ -38,8 +38,8 @@ class BodyCreator extends StatelessWidget {
               children: <Widget>[
                 Expanded(child: Container()),
                 SizedBox(
-                  width: screenHeight>600?200:150,
-                  height: screenHeight>600?60:40,
+                  width: screenHeight > 600 ? 200 : 150,
+                  height: screenHeight > 600 ? 60 : 40,
                   child: RaisedButton(
                     onPressed: () {
                       mainBloc.summInner(moneyFieldController.text);
@@ -141,6 +141,23 @@ class BodyCreator extends StatelessWidget {
                       initialData: mainBloc.limits,
                       builder:
                           (context, AsyncSnapshot<Map<String, int>> snapshot) {
+                        print("Balance: " + snapshot.data.toString());
+                        if (snapshot.data.values
+                                .toList()
+                                .fold(0, (value, element) => value + element) <
+                            1) {
+                          return Center(
+                            child: Text(
+                              'В банкомате закончились деньги',
+                              style: TextStyle(
+                                fontFamily: 'SF Pro Text',
+                                fontSize: 18,
+                                color: const Color(0xffe61ead),
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          );
+                        }
                         return Container(
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
@@ -167,7 +184,7 @@ class BodyCreator extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: screenHeight>600? 15:5 ),
+        SizedBox(height: screenHeight > 600 ? 15 : 5),
         screenHeight > 600
             ? SizedBox(
                 width: screenWidth,

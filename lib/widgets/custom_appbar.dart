@@ -18,12 +18,12 @@ class _CustomAppBar extends State<CustomAppBar> {
       decoration: BoxDecoration(
         gradient: linearGradient(FIRST_COLOR, SECOND_COLOR),
         boxShadow: [
-                BoxShadow(
-                  color: const Color(0x43170f50),
-                  offset: Offset(0, 6),
-                  blurRadius: 8,
-                ),
-              ],
+          BoxShadow(
+            color: const Color(0x43170f50),
+            offset: Offset(0, 6),
+            blurRadius: 8,
+          ),
+        ],
       ),
       child: SafeArea(
         child: Row(
@@ -33,7 +33,6 @@ class _CustomAppBar extends State<CustomAppBar> {
                 width: 66.79,
                 height: 25.7,
                 margin: EdgeInsets.only(left: 16, top: 16, bottom: 16),
-
                 child: Image.asset('assets/icon.png')),
           ],
         ),

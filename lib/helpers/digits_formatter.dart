@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+
 class DigitsFormatter extends TextInputFormatter {
   DigitsFormatter({this.maxDigits});
   final int maxDigits;
@@ -22,6 +23,7 @@ class DigitsFormatter extends TextInputFormatter {
         text: newText,
         selection: new TextSelection.collapsed(offset: newText.length));
   }
+
   //here the method
   double getUnmaskedText() {
     return umaskValue;
