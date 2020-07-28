@@ -4,9 +4,9 @@ import 'package:ioc/ioc.dart';
 class MainBloc {
   Map<String, int> limits = Ioc().use('limits');
 
-  Subject<String> _cashWithdrawal = PublishSubject<String>();
-  Subject<Map<String, int>> _cashOut = BehaviorSubject<Map<String, int>>();
-  Subject<Map<String, int>> _balanceOut = BehaviorSubject<Map<String, int>>();
+  final Subject<String> _cashWithdrawal = PublishSubject<String>();
+  final Subject<Map<String, int>> _cashOut = BehaviorSubject<Map<String, int>>();
+  final Subject<Map<String, int>> _balanceOut = BehaviorSubject<Map<String, int>>();
 
   Function(String) get summInner => _cashWithdrawal.sink.add;
   Stream<Map<String, int>> get cashOut => _cashOut.stream;
